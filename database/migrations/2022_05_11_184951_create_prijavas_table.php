@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('student_id');
             $table->string('ispit_id');
-            $table->date('datum_prijave');
             $table->string('ispitni_rok');
+            $table->date('datum_prijave');
             $table->timestamps();
         });
     }

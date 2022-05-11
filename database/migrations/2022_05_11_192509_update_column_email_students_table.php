@@ -26,7 +26,7 @@ return new class extends Migration
     public function down()
     {
         Schema::table('students', function (Blueprint $table) {
-            $table->renameColumn('studentski_email','email');
+            $table->renameColumn('studentski_emial','email');
         });
     }
 };
