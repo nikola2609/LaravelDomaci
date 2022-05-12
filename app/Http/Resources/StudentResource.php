@@ -24,6 +24,6 @@ class StudentResource extends JsonResource
             'mesto_stanovanja'=>$this->resource->mesto_stanovanja
 
 
-        ]
+        ];
     }
 }

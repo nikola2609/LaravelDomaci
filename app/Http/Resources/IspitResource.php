@@ -22,7 +22,7 @@ class IspitResource extends JsonResource
         'semestar'=>$this->resource->semestar,
         'godina_studija'=>$this->resource->godina_studija,
         'espb'=>$this->resource->espb
-        ]
+        ];
          
         
     }

@@ -22,6 +22,6 @@ class PrijavaResource extends JsonResource
         'ispit_id'=> new IspitResource(Ispit::find($this->resource->ispit_id)),
         'ispitni_rok'=>$this->resource->ispitni_rok,
         'datum_prijave'=>$this->resource->datum_prijave
-        ]
+        ];
     }
 }
