@@ -14,6 +14,6 @@ class PrijavaSeeder extends Seeder
      */
     public function run()
     {
-        Prijava::factory()->count(10)->create();
+        Prijava::factory()->count(20)->create();
     }
 }

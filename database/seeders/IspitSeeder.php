@@ -14,6 +14,6 @@ class IspitSeeder extends Seeder
      */
     public function run()
     {
-        Ispit::factory()->count(20)->create();
+        Ispit::factory()->count(1)->create();
     }
 }
