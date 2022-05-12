@@ -4,6 +4,9 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Database\Seeders\StudentSeeder;
+use Database\Seeders\IspitSeeder;
+use Database\Seeders\PrijavaSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -20,5 +23,14 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        $StudentSeeder=new StudentSeeder;
+        $IspitSeeder=new IspitSeeder;
+        $PrijavaSeeder=new PrijavaSeeder;
+
+        $StudentSeeder->run();
+        $IspitSeeder->run();
+        $PrijavaSeeder->run();
+
     }
 }
