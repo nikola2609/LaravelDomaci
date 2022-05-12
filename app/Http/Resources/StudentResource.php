@@ -12,6 +12,7 @@ class StudentResource extends JsonResource
      * @param  \Illuminate\Http\Request  $request
      * @return array|\Illuminate\Contracts\Support\Arrayable|\JsonSerializable
      */
+    public static $wrap='Student';
     public function toArray($request)
     {
         return[

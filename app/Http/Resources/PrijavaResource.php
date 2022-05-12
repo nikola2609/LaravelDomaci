@@ -13,6 +13,7 @@ class PrijavaResource extends JsonResource
      * @param  \Illuminate\Http\Request  $request
      * @return array|\Illuminate\Contracts\Support\Arrayable|\JsonSerializable
      */
+    public static $wrap='Prijava';
     public function toArray($request)
     {
         return[
