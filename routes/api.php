@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\IspitController;
 use App\Http\Controllers\PrijavaController;
+use App\Http\Controllers\API\AuthController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -15,9 +16,16 @@ use App\Http\Controllers\PrijavaController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+Route::group(['middleware' => ['auth:sanctum']], function () {
 Route::resource('student',StudentController::class);
 Route::resource('ispit',IspitController::class);
 Route::resource('prijava',PrijavaController::class);
+Route::post('/logout', [AuthController::class, 'logout']);
+});
+Route::post('/register', [AuthController::class, 'register']);
+Route::post('/login', [AuthController::class, 'login']);
+
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
